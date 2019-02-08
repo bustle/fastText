@@ -60,7 +60,7 @@ double Meter::recall() const {
 void Meter::writeGeneralMetrics(std::ostream& out, int32_t k) const {
   out << "N"
       << "\t" << nexamples_ << std::endl;
-  out << std::setprecision(3);
+  out << std::setprecision(6);
   out << "P@" << k << "\t" << metrics_.precision() << std::endl;
   out << "R@" << k << "\t" << metrics_.recall() << std::endl;
 }
